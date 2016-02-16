@@ -7,8 +7,5 @@ using std::cin;
 using std::endl;
 using std::string;
 
-void LOGD(string str)
-{
-    cout<<"*** "<<str<<" ***"<<endl;
-}
+void LOGD(string str);
 #endif//COMMON_H
