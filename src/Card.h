@@ -9,5 +9,7 @@ public:
     int operator==(Card& card);
     int operator!=(Card& card);
     void operator=(Card& card);
+private:
+    void init(int c, int n);
 };
 #endif//CARD_H

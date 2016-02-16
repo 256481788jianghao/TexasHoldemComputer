@@ -2,12 +2,11 @@
 #include "Card.h"
 
 Card::Card(int c, int n){
-    color = c;
-    number = n;
+    init(c,n);
 }
 
 Card::Card(){
-    Card(-1,-1);
+    init(-1,-1);
 }
 
 int Card::operator==(Card& card){
@@ -29,3 +28,7 @@ void  Card::operator=(Card& card){
     this->number = card.number;
 }
 
+void Card::init(int c, int n){
+    color = c;
+    number = n;
+}
