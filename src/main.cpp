@@ -1,7 +1,12 @@
 #include "common.h"
 
+#define TESTMODULE
+
 int main(int argc, char* argv[])
 {
-    LOGD("TETS");
+#ifdef TESTMODULE
+    ModuleTest();
+#else
+#endif
     return 0;
 }

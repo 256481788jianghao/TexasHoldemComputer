@@ -8,4 +8,5 @@ using std::endl;
 using std::string;
 
 void LOGD(string str);
+void ModuleTest();
 #endif//COMMON_H

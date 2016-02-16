@@ -17,6 +17,13 @@ int Card::operator==(Card& card){
     return 0;
 }
 
+int Card::operator!=(Card& card){
+    if((*this) == card){
+        return 0;
+    }
+    return 1;
+}
+
 void  Card::operator=(Card& card){
     this->color = card.color;
     this->number = card.number;

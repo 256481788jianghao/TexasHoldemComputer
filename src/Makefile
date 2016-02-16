@@ -1,5 +1,5 @@
 TexasHoldemComputer: *.cpp *.h
-	g++ $? -o $@
+	g++ $^ -o $@
 
 .PHONY:clean
 clean:

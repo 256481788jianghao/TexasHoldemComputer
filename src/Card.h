@@ -7,6 +7,7 @@ public:
     Card();
     Card(int c,int n);
     int operator==(Card& card);
+    int operator!=(Card& card);
     void operator=(Card& card);
 };
 #endif//CARD_H
