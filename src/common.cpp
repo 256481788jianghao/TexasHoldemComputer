@@ -43,5 +43,8 @@ void ModuleTest(){
         Card tmp = clist1.get(i);
         cout<<"CardList node["<<i<<"] number="<<tmp.number<<endl;
     }
+    int index = -1;
+    index = clist1.find(card3);
+    cout<<"CardList card3 index="<<index<<endl;
     
 }

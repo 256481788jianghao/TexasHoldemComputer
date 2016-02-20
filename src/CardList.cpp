@@ -75,3 +75,15 @@ void CardList::add(Card& card){
     insert(insertPosition, card);
     size++;
 }
+
+int CardList::find(Card& card){
+    int index = -1;
+    Card c1;
+    for(index=0;index<size;index++){
+        c1 = get(index);
+        if(c1 == card){
+            return index;
+        }
+    }
+    return -1;
+}
