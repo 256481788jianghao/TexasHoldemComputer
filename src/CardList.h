@@ -14,6 +14,8 @@ public:
     int find(Card& card);
     int length();
     Card& get(int index);
+    Card& operator[](int index);
+    void printAll();
 private:
     int size;
     CardNode* head;

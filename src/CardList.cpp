@@ -87,3 +87,54 @@ int CardList::find(Card& card){
     }
     return -1;
 }
+
+void CardList::del(Card& card){
+    int index = -1;
+    index = find(card);
+    if(index != -1){
+        del(index);
+    }
+}
+
+void CardList::del(int index){
+    if(index < 0 || index > size -1){
+        return;
+    }
+    CardNode* pBeforeIndex = head;
+    for(int i=0; i<index; i++){
+        pBeforeIndex = pBeforeIndex->next;
+    }
+    CardNode* pIndex = pBeforeIndex->next;
+    CardNode* pAfterIndex = pIndex->next;
+    delete pIndex;
+    pBeforeIndex->next = pAfterIndex;
+    size--;
+}
+
+Card& CardList::operator[](int index){
+    return get(index);
+}
+
+void CardList::printAll(){
+    cout<<"CardList length="<<length()<<endl;
+    for(int i=0;i<length();i++){
+        cout<<"CardList["<<i<<"] color="<<(*this)[i].color<<" number="<<(*this)[i].number<<endl;
+    }
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

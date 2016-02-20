@@ -38,13 +38,12 @@ void ModuleTest(){
     clist1.add(card5);
     clist1.add(card2);
     clist1.add(card3);
-    cout<<"CardList length="<<clist1.length()<<endl;
-    for(int i=0;i<clist1.length();i++){
-        Card tmp = clist1.get(i);
-        cout<<"CardList node["<<i<<"] number="<<tmp.number<<endl;
-    }
+    clist1.printAll();
     int index = -1;
     index = clist1.find(card3);
-    cout<<"CardList card3 index="<<index<<endl;
+    cout<<"CardList find card3 at index="<<index<<endl;
+    clist1.del(card4);
+    cout<<"CardList del card4"<<endl;
+    clist1.printAll();
     
 }
