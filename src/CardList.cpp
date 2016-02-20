@@ -36,7 +36,7 @@ void CardList::insert(int index,Card& card){
     }
 
     CardNode* pCur = head;
-    for(int i=0;i<index+1;i++){
+    for(int i=0;i<index;i++){
         if(pCur->next == NULL){
             break;
         }
@@ -53,7 +53,7 @@ Card& CardList::get(int index){
         LOGD("CardList get index < 0 || index > size-1");
         return (*(head->card));
     }
-    for(int i=0;i<size;i++){
+    for(int i=0;i<index+1;i++){
         pCur = pCur->next;
     }
     return (*(pCur->card));
@@ -62,10 +62,16 @@ Card& CardList::get(int index){
 void CardList::add(Card& card){
     int index = 0;
     Card c1;
-    for(int index=0;index<size;index++){
+    for(index=0;index<size;index++){
         c1 = get(index);
         if(c1.number > card.number){
             break;
         }
     }
+    int insertPosition = index;
+    if(insertPosition < 0){
+        insertPosition = 0;
+    }
+    insert(insertPosition, card);
+    size++;
 }

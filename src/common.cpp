@@ -1,6 +1,7 @@
 #include "common.h"
 #include "Card.h"
 #include "CardNode.h"
+#include "CardList.h"
 
 void LOGD(string str){
     cout<<"*** "<<str<<" ***"<<endl;
@@ -26,4 +27,21 @@ void ModuleTest(){
     }else{
         LOGD("CardNode Module not pass");
     }
+    LOGD("start test CardList");
+    Card card4(2,4);
+    Card card5(2,5);
+    card3.number = 3;
+    card3.color = 2;
+ 
+    CardList clist1;
+    clist1.add(card4);
+    clist1.add(card5);
+    clist1.add(card2);
+    clist1.add(card3);
+    cout<<"CardList length="<<clist1.length()<<endl;
+    for(int i=0;i<clist1.length();i++){
+        Card tmp = clist1.get(i);
+        cout<<"CardList node["<<i<<"] number="<<tmp.number<<endl;
+    }
+    
 }
