@@ -122,6 +122,29 @@ void CardList::printAll(){
     }
 }
 
+void CardList::concat(CardList& list)
+{
+    for(int i=0;i<list.length();i++){
+        this->add(list[i]);
+    }
+}
+
+int CardList::operator==(CardList& list){
+    if(this->length() != list.length()){
+        return 0;
+    }
+    for(int i=0;i<this->length();i++){
+        if((*this)[i] != list[i]){
+            return 0;
+        }
+    }
+    return 1;
+}
+
+int CardList::operator!=(CardList& list){
+    return (*this) == list ? 0:1;
+}
+
 
 
 

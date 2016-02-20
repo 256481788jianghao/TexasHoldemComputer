@@ -16,6 +16,9 @@ public:
     Card& get(int index);
     Card& operator[](int index);
     void printAll();
+    void concat(CardList& list);
+    int operator==(CardList& list);
+    int operator!=(CardList& list);
 private:
     int size;
     CardNode* head;

@@ -45,5 +45,9 @@ void ModuleTest(){
     clist1.del(card4);
     cout<<"CardList del card4"<<endl;
     clist1.printAll();
+    CardList clist2;
+    clist2.concat(clist1);
+    cout<<"CardList clist2 concat clist1 clist2 == clist1? "<<(clist2 == clist1)<<endl;
+    
     
 }
