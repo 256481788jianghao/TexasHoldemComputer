@@ -25,6 +25,8 @@ class Math:
         return int(ans)
         
 MATH = Math()
+
+
         
 class Card:
     def __init__(self,color,number):
@@ -37,6 +39,17 @@ class Card:
     def print(self):
         print("color="+str(self.color)+" number="+str(self.number))
         
+class CardTreeNode:
+    def __init__(self,data,children,parent=None):
+        self.parent = parent
+        self.data = data
+        self.children = children
+        
+class CardTree:
+    def __init__(self,startNodeDataArray):
+        data_len = len(startNodeDataArray)
+        for i in range(data_len):
+            pass
         
 
 class CardGroup5:
@@ -76,6 +89,6 @@ class CardGroup5:
         
 if __name__ == '__main__':
     print("======start=========")
-    print(Card(1,2) == Card(1,5))
+    tree = CardTree([])
     print(MATH.C(52,7))
     print("======end===========")
