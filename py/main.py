@@ -15,6 +15,17 @@ TYPE_2D = 7
 TYPE_1D = 8
 TYPE_GP = 9
 
+class Math:
+    def C(self,n,k):
+        ans = 1;
+        for i in range(k):
+            ans *= int(n-i)
+        for i in range(k):
+            ans /= int(k-i)
+        return int(ans)
+        
+MATH = Math()
+        
 class Card:
     def __init__(self,color,number):
         self.color = color
@@ -62,4 +73,5 @@ if __name__ == '__main__':
     print("======start=========")
     cardGroup5 = CardGroup5([Card(1,6),Card(0,3),Card(3,2),Card(0,6),Card(2,5)])
     cardGroup5.print(False)
+    print(MATH.C(52,7))
     print("======end===========")
