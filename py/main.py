@@ -30,17 +30,22 @@ class Card:
     def __init__(self,color,number):
         self.color = color
         self.number = number
+        
+    def __eq__(self,other):
+        return (self.color == other.color) and (self.number == other.number) 
     
     def print(self):
         print("color="+str(self.color)+" number="+str(self.number))
+        
+        
 
 class CardGroup5:
     def __init__(self,CardList):
         self.CardListSortedByNumber = sorted(CardList,key=lambda card:card.number,reverse=False)     
         self.CardListSortedByColor = sorted(CardList,key=lambda card:card.color,reverse=False)
         
-    def print(self,isNumber=True):
-        if isNumber:
+    def print(self,byNumber=True):
+        if byNumber:
             for card in self.CardListSortedByNumber:
                 card.print()
         else:
@@ -71,7 +76,6 @@ class CardGroup5:
         
 if __name__ == '__main__':
     print("======start=========")
-    cardGroup5 = CardGroup5([Card(1,6),Card(0,3),Card(3,2),Card(0,6),Card(2,5)])
-    cardGroup5.print(False)
+    print(Card(1,2) == Card(1,5))
     print(MATH.C(52,7))
     print("======end===========")
