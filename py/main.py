@@ -40,16 +40,19 @@ class Card:
         print("color="+str(self.color)+" number="+str(self.number))
         
 class CardTreeNode:
-    def __init__(self,data,children,parent=None):
+    def __init__(self,data,parent=None):
         self.parent = parent
         self.data = data
-        self.children = children
+        self.children = []
+        
+    def isLast():
+        return len(self.children) == 0
         
 class CardTree:
-    def __init__(self,startNodeDataArray):
-        data_len = len(startNodeDataArray)
-        for i in range(data_len):
-            pass
+    def makeTree(self,startList):
+        self.root = startList[0]
+        for i in range(1,len(startList)):
+            self.root
         
 
 class CardGroup5:
